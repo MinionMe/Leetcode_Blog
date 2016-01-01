@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\学习\大二上学习\数据结构\作业\s02\3.22\main.cpp(69): warning C4018: “<”: 有符号/无符号不匹配
+d:\学习\大二上学习\数据结构\作业\s02\3.22\main.cpp(116): warning C4715: “Solution::calculatingOp”: 不是所有的控件路径都返回值
+  3.22.vcxproj -> D:\学习\大二上学习\数据结构\作业\S02\Debug\3.22.exe

@@ -1,0 +1,4 @@
+﻿  bigNum_add.cpp
+d:\学习\大二上学习\数据结构\作业\小程序\小程序\bignum_add.cpp(3): warning C4005: “_CRT_SECURE_NO_WARNINGS”: 宏重定义
+          命令行参数: 参见前面的“_CRT_SECURE_NO_WARNINGS”定义
+  小程序.vcxproj -> D:\学习\大二上学习\数据结构\作业\小程序\Debug\小程序.exe

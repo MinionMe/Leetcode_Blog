@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///D:/ConsoleApplication1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<script src="jquery.js"></script>
+	<title>Music Search&amp;Recommend System</title>
+	<!-- Custom Theme files -->
+	<link href="style.css" rel="stylesheet" type="text/css" media="all">
+	<!-- Custom Theme files -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta name="keywords" content="Flat Search Box Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design">
+	<script type="text/javascript">
+				$.ajaxSetup({
+					processData:false
+				});</script>
+	<style type="text/css">
+	body, th, td { font-family: Arial, Verdana, sans-serif; font-size: 0.9em; }
+	a:link, a:visited { color: #59B337; }
+	a:hover, a:active, a:focus { color: #000000; }
+	table.dataTable tr.marked { background-color: #FFD900; }
+	</style>
+	<!-- jquery packed -->
+	<script type="text/javascript" src="jquery-1.2.3.pack.js"></script>
+	<!-- tableRowCheckboxToggle -->
+	<script type="text/javascript" src="tableRowCheckboxToggle.js"></script>
+	</head>
+
+<body>
+	<!--search start here-->
+<div class="search">
+	<i> </i>
+	<div class="s-bar">
+			<input type="text" id="input" name="input" value="Search Bar" onfocus="this.value = &#39;&#39;;" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Search&#39;;}">
+			<button name="post" id="post" value="Search" heignt = "34">Click Me!</button>
+	</div>
+<!-- 	<p>Popular searches: <a href="#">Modern PSD template,</a> <a href="#"> Portfolio design </a></p> -->
+</div
+<!--search end here-->
+<div class="search" width="100px">
+	<div class="s-bar">
+		<table width="120px" align="center" class="dataTable">
+			<tbody><tr><td width="150px"><font size="3px" color="blue"> Choose Function</font></td>
+			<td width="100px">
+				<select id ="Choose" width="100px" onchange="fun()">
+				<option name="null" value="2"></option>
+				<option name="song" value="0" title="To search the songs which contain these words">Search Song</option>
+				<option name="recommend" title="To give you the Recommended music " value="1">Recommend Song</option>
+				</select>
+			</td>
+		</tr></tbody></table>
+	</div>
+</div>
+
+<div id="output"></div>
+
+	<script type="text/javascript">
+	    var str1;
+	    function fun () {
+	    	str1 = document.getElementById("Choose").value;
+	    }
+		$('#post').on('click', function(){
+			if ($('#input').val() != '' && str1 != 2){
+				var str = 'http://localhost/?' + $('#input').val() + '@' + str1;
+				$.get(str, function(data, err){
+					$('#output').html(data);
+				});
+			}
+		});
+	</script>
+<div class="copyright">
+	 <p>2015  Music Search&amp;Recommend System All rights reserved | Created by  <a href="http://home.cnblogs.com/" target="_blank">  Li Shuang </a></p>
+</div>
+
+</body></html>
